@@ -5,14 +5,13 @@ WebServer Configuration :
 
 Install LEMP on WebServer
 In Configuration File of Nginx add request block of PHP
-location ~ \.php$ {
+ $ location ~ \.php$ {
     proxy_pass http://IP;
     proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
-    
-}
+    }
 
 AppServer Configuration :
 Install Mysql and Create database in RDS (add SG of AppServer In RDS)
