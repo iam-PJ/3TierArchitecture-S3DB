@@ -1,7 +1,3 @@
-# Save the current README content into a file for download
-file_path = "/mnt/data/README_Infrastructure_Setup.md"
-
-content = """# README: Infrastructure Setup and Configuration
 
 ## Overview
 This document outlines the steps required to set up and configure the necessary infrastructure and servers for the project.
@@ -64,15 +60,15 @@ This document outlines the steps required to set up and configure the necessary 
 3. **Install AWS SDK and Composer**:
    - Install Composer:
      ```bash
-     curl -sS https://getcomposer.org/installer | php
-     mv composer.phar /usr/local/bin/composer
-     ```
-   - Use Composer to install the AWS SDK:
-     ```bash
-     composer require aws/aws-sdk-php
-     ```
+     # in HTML folder of AppServer
 
----
+     sudo curl -sS https://getcomposer.org/installer | sudo php
+     sudo mv composer.phar /usr/local/bin/composer
+     sudo ln -s /usr/local/bin/composer /usr/bin/composer
+     sudo composer require aws/aws-sdk-php
+     ```
+   
+
 
 ## Notes
 - Ensure all security groups, IAM roles, and permissions
